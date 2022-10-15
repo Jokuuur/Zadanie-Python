@@ -1,52 +1,53 @@
-# # # #Zad.1
-# # # a = int(input("Podaj liczbę a : "))
-# # # b = int(input("Podaj liczbę b : "))
-# # # ab = a+b
-# # # if(ab%2==0):
-# # #     print("Parzysta")
-# # # else:
-# # #     print("Nie Parzysta")
-# # # #Zad.2 
-# # import math
+print("ZADANIE 1")
+a = int(input("Podaj a : "))
+b = int(input("Podaj b : "))
+if (a + b) % 2 == 0: print("TAK, parzysta")
+else: print("NIE, nie parzysta")
 
-# # c = int(input("Podaj liczbę c : "))
-# # d = int(input("Podaj liczbę d : "))
-# # if((c+d)/2 > math.sqrt(d*c)):
-# #     print("Średnia arytmetyczna jest większa")
-# # else:
-# #     print("Średnia geometryczna jest większa")
-# # # #Zad.3 
-# e = int(input("Podaj liczbę e : "))
-# f = int(input("Podaj liczbę f : "))
-# g = int(input("Podaj liczbę g : "))
-# if(e==f or f==g or g==e):
-#     print("Tak")
-# else:
-#     print("Nie")
-# if(e==f):
-#     print("Te liczby to e=f")
-#     pass
-# if(f==g):
-#     print("te liczby to f=g")
-#     pass
-# if(g==e):
-#     print("Te liczby to g==e")
-#     pass
-# # #Zad.4
-# # # h = int(input("Podaj liczbę h : "))
-# # # i = int(input("Podaj liczbę i : "))
-# # # j = int(input("Podaj liczbę j : "))
-# # # k = int(input("Podaj liczbę k : "))
-# # # lista = [h,i,j,k]
-# # # print(min(lista))
-# # #Zad.5
-# # # l = float(input("Podaj najkrótszy bok : "))
-# # # m = float(input("Podaj bok o dłuższej długości niż najkrótszy ale nie większej niż największy bok : "))
-# # # n = float(input("Poproszę bok o największej długości : "))
-# # # if((l+m)>n):
-# # #     print("taki trójkąt ma szansę istnieć")
-# # # else:
-# # #     print("Taki trójkąt nie może istnieć")
-# # # if((l+m)<n):
-# # #     print("Musiałeś podać złe wartości gdyż widzisz ten komunikat bądź sprawdzasz l+m<n")
-# # #     pass
+print("ZADANIE 2")
+from math import sqrt
+a2 = float(input("Podaj a2 : "))
+b2 = float(input("Podaj b2 : "))
+if (a2 + b2) / 2 > sqrt(a2 * b2) : print("TAK, średnia arytmetyczna > geometryczna")
+else : print("NIE, średnia ary. < geo.")
+
+print("ZADANIE 3")
+a3 = int(input("Podaj a3 : "))
+b3 = int(input("Podaj b3 : "))
+c3 = int(input("Podaj c3 : "))
+if a3 == b3 or a3 == c3 or b3 == c3 : 
+    print("TAK, przynajmniej dwie są równe")
+    if a3 == b3 and a3 == c3 and b3 == c3 : print("Wszystkie liczby są równe")
+    elif a == b : print("Liczby to : 'a3' i 'b3'")
+    elif a == c : print("Liczby to : 'a3' i 'c3'")
+    elif b == c : print("Liczby to : 'b3' i 'c3'")
+else : print("NIE, nie ma równych")
+
+print("ZADANIE 4")
+a4 = int(input("Podaj a4 : "))
+b4 = int(input("Podaj b4 : "))
+c4 = int(input("Podaj c4 : "))
+d4 = int(input("Podaj d4 : "))
+if a4 < b4 and a4 < c4 and a4 < d4: print("Najmniejsza liczba to ",a4)
+elif b4 < a4 and b4 < c4 and b4 < d4 : print("Najmniejsza liczba to ",b4)
+elif c4 < a4 and c4 < b4 and c4 < d4 : print("Najmniejsza liczba to ",c4)
+elif d4 < a4 and d4 < b4 and d4 < c4 : print("Najmniejsza liczba to ",d4)
+else : print("Podales 2 takie same liczby ")
+
+print("ZADANIE 5")
+a5 = int(input("Podaj a5 : "))
+b5 = int(input("Podaj b5 : "))
+c5 = int(input("Podaj c5 : "))
+if b5 - c5 < a5 < b5 + c5 and a5 - c5 < b5 < a5 + c5 and a5 - b5 < c5 < a5 + b5 : print("TAK, spełnia nierówność")
+else : print("NIE, nie spełnia nierówności")
+
+print("ZADANIE 6")
+a6 = int(input("Podaj a6 : "))
+b6 = int(input("Podaj b6 : "))
+c6 = int(input("Podaj c6 : "))
+if a6 < b6 + c6 and b6 < a6 + c6 and c6 < a6 + b6 : 
+    print("Taki trojkat moze istniec")
+    if a6**2 + b6**2 == c6**2 or b6**2 + c6**2 == a6**2 or c6**2 + a6**2 == b6**2 : print("trójkąt prostokątny")
+    elif a6**2 + b6**2 < c6**2 or b6**2 + c6**2 < a6**2 or c6**2 + a6**2 < b6**2 : print("trójkąt rozwartokątny")
+    elif a6**2 + b6**2 > c6**2 or b6**2 + c6**2 > a6**2 or c6**2 + a6**2 > b6**2 : print("trójkąt ostrokątny")
+else : print("Trójkąt nie powstanie")
