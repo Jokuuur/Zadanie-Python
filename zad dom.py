@@ -18,9 +18,9 @@ c3 = int(input("Podaj c3 : "))
 if a3 == b3 or a3 == c3 or b3 == c3 : 
     print("TAK, przynajmniej dwie są równe")
     if a3 == b3 and a3 == c3 and b3 == c3 : print("Wszystkie liczby są równe")
-    elif a == b : print("Liczby to : 'a3' i 'b3'")
-    elif a == c : print("Liczby to : 'a3' i 'c3'")
-    elif b == c : print("Liczby to : 'b3' i 'c3'")
+    elif a3 == b3 : print("Liczby to : 'a3' i 'b3'")
+    elif a3 == c3 : print("Liczby to : 'a3' i 'c3'")
+    elif b3 == c3 : print("Liczby to : 'b3' i 'c3'")
 else : print("NIE, nie ma równych")
 
 print("ZADANIE 4")
